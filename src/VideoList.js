@@ -29,11 +29,10 @@ const VideoList = () => {
     }
 
     return (
-        !videoList.length ? <p>No Records</p> : <div className='container'>
+        !videoList.length ? <p>No Records</p> :
             <div className='row'>
                 {videoList.map((videos, index) => (<VideoCard key={videos?.snippet?.title} videoData={videos} />))}
             </div>
-        </div>
     )
 }
 

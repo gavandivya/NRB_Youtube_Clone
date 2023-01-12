@@ -13,7 +13,7 @@ const VideoPage = () => {
     }, []);
 
     return (
-        <div className={storeValue ? "col-10 my-2" : "col-12 m-2"} >
+        <div className={storeValue ? "col-10 my-2" : "col-12 p-4"} >
             <VideoContainer />
             <CommentSec />
         </div >

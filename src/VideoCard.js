@@ -6,7 +6,7 @@ const VideoCard = ({ videoData }) => {
   return (
     <div className="col-3 p-1">
       <Link to={"/watch?v=" + id}>
-        <div className="card border-0 rounded-2xl mt-3">
+        <div className="card border-0 rounded-2xl mt-4">
           <img
             alt="thumbnail"
             className="img-fluid rounded-2xl"

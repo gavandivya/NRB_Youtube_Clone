@@ -11,28 +11,28 @@ const Nav = () => {
   };
 
   return (
-    <div className="grid grid-flow-col m-2">
-      <div className="col-span-1">
+    <div className="row m-2">
+      <div className="col">
         <img
-          width={40}
+          width={30}
           alt="hamburger"
           onClick={openCloseMenu}
           src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/96/null/external-mobile-application-hamburger-menu-setting-interface-basic-filled-tal-revivo.png"
         />
       </div>
-      <div className="col-span-1">
+      <div className="col-2">
         <img width={100} src={logo} alt="" />
       </div>
-      <div className="col-span-8">
+      <div className="col-7">
         <input
           type="text"
           name=""
           id=""
           placeholder="Search"
-          className="py-2 px-4 bg-gray-200 rounded-full w-96"
+          className="py-1.5 px-3 text-sm border border-black-900 rounded-full w-8/12"
         />
       </div>
-      <div className="col-span-1 pl-10">
+      <div className="col-2 pl-10">
         <img
           alt="user"
           width={40}

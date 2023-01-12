@@ -6,7 +6,7 @@ const Body = () => {
     const storeValue = useSelector(store => store.SideMenu.toggle);
 
     return (
-        <div className={storeValue ? "col-10" : "col-12 m-2"}>
+        <div className={storeValue ? "col-10" : "col-12 p-4"}>
             <TagList />
             <VideoList />
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CommentSec from './CommentSec';
+import LiveChat from './LiveChat';
 import { closeMenu } from './slice';
 import VideoContainer from './VideoContainer';
 
@@ -13,8 +14,11 @@ const VideoPage = () => {
     }, []);
 
     return (
-        <div className={storeValue ? "col-10 my-2" : "col-12 p-4"} >
-            <VideoContainer />
+        <div className={storeValue ? "col-10 my-2" : "col-12"} >
+            <div className='row'>
+                <VideoContainer />
+                <LiveChat />
+            </div>
             <CommentSec />
         </div >
     )

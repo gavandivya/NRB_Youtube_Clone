@@ -23,7 +23,7 @@ const router = createBrowserRouter(routesConfig);
 function App() {
   return (
     <Provider store={store}>
-      <div className="container">
+      <div className="container-fluid">
         <Nav />
         <div className='row'>
           <SideMenu />

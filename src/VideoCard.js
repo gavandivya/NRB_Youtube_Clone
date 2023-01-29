@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import ThemeContext from "./Context/ThemeContext";
 
 const VideoCard = ({ videoData }) => {
   const { id } = videoData;
+  const { themeCon } = useContext(ThemeContext);
   return (
-    <div className="col-3 p-1">
+    <div className={`col-lg-3 col-md-4 col-sm-6 p-3`}>
       <Link to={"/watch?v=" + id}>
-        <div className="card border-0 rounded-2xl mt-4">
+        <div className={`card border-0 rounded-2xl mt-4  ${themeCon === "dark" ? "darkClass" : "lightClass"}`}>
           <img
             alt="thumbnail"
             className="img-fluid rounded-2xl"

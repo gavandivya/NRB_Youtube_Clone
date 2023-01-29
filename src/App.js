@@ -6,6 +6,8 @@ import store from './store';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import VideoPage from './VideoPage';
+import ThemeContext from './Context/ThemeContext';
+import { useState } from 'react';
 
 const routesConfig = [
   {
@@ -21,17 +23,20 @@ const routesConfig = [
 const router = createBrowserRouter(routesConfig);
 
 function App() {
+  const [theme, setTheme] = useState("light");
   return (
-    <Provider store={store}>
-      <div className="container-fluid">
-        <Nav />
-        <div className='row'>
-          <SideMenu />
-          {/* <Body /> */}
-          <RouterProvider router={router} />
+    <ThemeContext.Provider value={{ themeCon: theme, setThemeCon: setTheme }}>
+      <Provider store={store}>
+        <div className="container-fluid">
+          <Nav />
+          <div className='row'>
+            <SideMenu />
+            {/* <Body /> */}
+            <RouterProvider router={router} />
+          </div>
         </div>
-      </div>
-    </Provider>
+      </Provider>
+    </ThemeContext.Provider>
   );
 }
 

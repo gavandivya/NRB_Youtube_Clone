@@ -5,11 +5,14 @@ import VideoCard from './VideoCard';
 import { useSelector, useDispatch } from 'react-redux';
 import { cacheVideoData } from './videoSlice';
 import { openMenu } from './slice';
+import ThemeContext from './Context/ThemeContext';
+import { useContext } from 'react';
 
 const VideoList = () => {
     //const [videoList, setVideoList] = useState([]); //No need of this state
     const videoList = useSelector(store => store.caching.videoList);
     const dispatch = useDispatch();
+    const { themeCon } = useContext(ThemeContext);
 
     useEffect(() => {
         // if (videoList.length == 0) {
@@ -26,13 +29,14 @@ const VideoList = () => {
         //setVideoList(json.items);
         dispatch(cacheVideoData(json.items));
         console.log(json);
+        console.log(themeCon);
     }
 
     return (
         !videoList.length ? <p>No Records</p> :
             <div className='row'>
                 {videoList.map((videos, index) => (<VideoCard key={videos?.snippet?.title} videoData={videos} />))}
-            </div>
+            </div >
     )
 }
 

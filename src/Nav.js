@@ -5,10 +5,12 @@ import hamWhite from "../src/assets/hamburgerWhite.png";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "./slice";
 import ThemeContext from "./Context/ThemeContext";
+import SearchContext from "./Context/SearchContext";
 
 const Nav = () => {
   const dispatch = useDispatch();
-  const { themeCon, setThemeCon } = useContext(ThemeContext)
+  const { themeCon, setThemeCon } = useContext(ThemeContext);
+  const { searchContext, setSearchContext } = useContext(SearchContext)
 
   const openCloseMenu = () => {
     dispatch(toggleMenu());
@@ -40,6 +42,8 @@ const Nav = () => {
           id=""
           placeholder="Search"
           className="py-1.5 px-3 text-sm border border-black-900 rounded-full w-8/12"
+          value={searchContext}
+          onChange={(e) => setSearchContext(e.target.value)}
         />
       </div>
       <div className="col-1 pl-10">

@@ -23,16 +23,21 @@ const VideoList = () => {
         // console.log(!videoList?.length);
         !videoList?.length && fetchVideos();
         dispatch(openMenu())
-
         if (searchContext.length !== 0) {
+            // const timeout = setTimeout(() => {
             filteredData();
+            // }, 1000);
+
+            // return () => {
+            //     clearTimeout(timeout);
+            // }
         }
     }, [searchContext]);
 
 
     const filteredData = () => {
         return videoList.filter((data) =>
-            data?.snippet?.channelTitle.toLocaleLowerCase().includes(searchContext.toLocaleLowerCase())
+            data?.snippet?.title.toLocaleLowerCase().includes(searchContext.toLocaleLowerCase())
         )
     }
 

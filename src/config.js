@@ -24,12 +24,25 @@ export const comments = [
                 comment: "Please explain!",
                 replies: [
                     {
-                        name: "Nikita",
+                        name: "Sharmila",
                         comment: "when god has better plans for u!"
                     },
                     {
                         name: "Ajay",
                         comment: "Being “Godfident” means that we totally rely on God for everything."
+                    },
+                    {
+                        name: "Disha",
+                        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu metus eget nisl sollicitudin tincidunt.",
+                        replies: [
+                            {
+                                name: "Nikita",
+                                comment: "Maecenas eu metus eget nisl sollicitudin tincidunt."
+                            },
+                            {
+                                name: "Ajay",
+                                comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                            }]
                     },
                 ]
             },

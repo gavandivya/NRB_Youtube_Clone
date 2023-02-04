@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { chatMenu } from "./chatSlice";
-import { randomText } from "./config";
-import { randomName } from "./config";
+import { chatMenu } from "../slice/chatSlice";
+import { randomText } from "../config";
+import { randomName } from "../config";
 
 const LiveChat = () => {
   const chat = useSelector((state) => state.chat);

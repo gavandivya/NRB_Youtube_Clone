@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CommentSec from './CommentSec';
 import LiveChat from './LiveChat';
-import { closeMenu } from './slice';
+import { closeMenu } from '../slice/slice';
 import VideoContainer from './VideoContainer';
 
 const VideoPage = () => {

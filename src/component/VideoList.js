@@ -1,12 +1,12 @@
 import React from 'react'
 import { useEffect } from 'react';
-import { API_URL } from './config';
+import { API_URL } from '../config';
 import VideoCard from './VideoCard';
 import { useSelector, useDispatch } from 'react-redux';
-import { cacheVideoData } from './videoSlice';
-import { openMenu } from './slice';
-import ThemeContext from './Context/ThemeContext';
-import SearchContext from './Context/SearchContext';
+import { cacheVideoData } from '../slice/videoSlice';
+import { openMenu } from '../slice/slice';
+import ThemeContext from '../Context/ThemeContext';
+import SearchContext from '../Context/SearchContext';
 import { useContext } from 'react';
 
 const VideoList = () => {

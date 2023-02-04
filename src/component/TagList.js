@@ -1,6 +1,6 @@
 import React from 'react'
 import Singletag from './SingleTag'
-import { tagsData } from './config'
+import { tagsData } from '../config'
 
 const TagList = () => {
 

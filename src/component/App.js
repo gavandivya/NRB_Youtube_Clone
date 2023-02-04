@@ -1,14 +1,14 @@
-import './App.css';
+import '../App.css';
 import Body from './Body';
 import Nav from './Nav';
 import SideMenu from './SideMenu';
-import store from './store';
+import store from '../store';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import VideoPage from './VideoPage';
-import ThemeContext from './Context/ThemeContext';
+import ThemeContext from '../Context/ThemeContext';
 import { useState } from 'react';
-import SearchContext from './Context/SearchContext';
+import SearchContext from '../Context/SearchContext';
 
 const routesConfig = [
   {

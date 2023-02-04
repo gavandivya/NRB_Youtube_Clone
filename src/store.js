@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import chatSlice from './chatSlice';
-import slice from './slice';
-import videoSlice from './videoSlice';
+import chatSlice from './slice/chatSlice';
+import slice from './slice/slice';
+import videoSlice from './slice/videoSlice';
 
 const store = configureStore({
     reducer: {

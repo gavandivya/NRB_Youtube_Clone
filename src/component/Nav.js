@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import logo from "../src/assets/youtube.png";
-import darklogo from "../src/assets/darklogo.png";
-import hamWhite from "../src/assets/hamburgerWhite.png";
+import logo from "../assets/youtube.png";
+import darklogo from "../assets/darklogo.png";
+import hamWhite from "../assets/hamburgerWhite.png";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "./slice";
-import ThemeContext from "./Context/ThemeContext";
-import SearchContext from "./Context/SearchContext";
+import { toggleMenu } from "../slice/slice";
+import ThemeContext from "../Context/ThemeContext";
+import SearchContext from "../Context/SearchContext";
 
 const Nav = () => {
   const dispatch = useDispatch();

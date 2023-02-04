@@ -1,6 +1,6 @@
 import React from 'react'
 import SingleComment from './SingleComment';
-import { comments } from './config';
+import { comments } from '../config';
 
 
 
